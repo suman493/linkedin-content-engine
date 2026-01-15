@@ -11,12 +11,35 @@ client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data")
 
 def load_profile_data():
-    with open(os.path.join(DATA_PATH, "suman_linkedin_data.json"), "r") as f:
-        return json.load(f)
+    try:
+        with open(os.path.join(DATA_PATH, "suman_linkedin_data.json"), "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        # Return default profile data if file doesn't exist
+        return {
+            "writing_style": {
+                "tone": "Direct, personal, conversational. No corporate speak."
+            },
+            "content_pillars": {}
+        }
 
 def load_historical_posts():
-    with open(os.path.join(DATA_PATH, "historical_posts.json"), "r") as f:
-        return json.load(f)
+    try:
+        with open(os.path.join(DATA_PATH, "historical_posts.json"), "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        # Return default structure if file doesn't exist
+        return {
+            "posts": [],
+            "summary_stats": {
+                "total_posts": 0,
+                "avg_impressions": 0,
+                "avg_reactions": 0,
+                "avg_engagement_rate": 0
+            },
+            "performance_by_format": {},
+            "performance_by_pillar": {}
+        }
 
 PROFILE_DATA = load_profile_data()
 HISTORICAL_POSTS = load_historical_posts()
