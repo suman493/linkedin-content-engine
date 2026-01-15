@@ -1,0 +1,63 @@
+{
+  "posts": [
+    {"id": 1, "date": "Nov 2025", "type": "Client Case Study", "format": "Text + Image", "topic": "K18 Annual Offsite - Pasea Hotel, Huntington Beach", "pillar": "C", "reactions": 30, "comments": 1, "impressions": 1247, "engagement_rate": 2.49, "url": null},
+    {"id": 2, "date": "Nov 2025", "type": "Company Story", "format": "Text + Image", "topic": "Marco founding vision - flyer from first event", "pillar": "D", "reactions": 32, "comments": 8, "impressions": 2200, "engagement_rate": 1.82, "url": null},
+    {"id": 3, "date": "Oct 2025", "type": "Tech Commentary", "format": "Repost", "topic": "Polymarket $9B company with <50 employees", "pillar": "External", "reactions": 9, "comments": 0, "impressions": 2818, "engagement_rate": 0.32, "url": null},
+    {"id": 4, "date": "Oct 2025", "type": "Tech Commentary", "format": "Text + Image", "topic": "Bubble Bois group chat - AI bubble debate with SoftBank team photo", "pillar": "External", "reactions": 40, "comments": 2, "impressions": 6342, "engagement_rate": 0.66, "top_performer": true, "why_it_worked": "Personal connection to credible network, hot take on timely topic, throwback photo adds authenticity", "url": null},
+    {"id": 5, "date": "Oct 2025", "type": "Event", "format": "Text + Image", "topic": "Epoch event in New York", "pillar": "D", "reactions": 16, "comments": 2, "impressions": 668, "engagement_rate": 2.69, "url": null},
+    {"id": 6, "date": "Oct 2025", "type": "Lifestyle", "format": "Text + Image", "topic": "Working from Jackson Hole", "pillar": "D", "reactions": 19, "comments": 2, "impressions": 2539, "engagement_rate": 0.83, "url": null},
+    {"id": 7, "date": "Oct 2025", "type": "Tech Repost", "format": "Repost", "topic": "Cursor $100M revenue, $10B valuation", "pillar": "External", "reactions": 11, "comments": 3, "impressions": 2386, "engagement_rate": 0.59, "url": null},
+    {"id": 8, "date": "Sep 2025", "type": "Operator POV", "format": "Text + Image", "topic": "People, places, details that make everything work", "pillar": "D", "reactions": 18, "comments": 2, "impressions": 869, "engagement_rate": 2.30, "url": null},
+    {"id": 9, "date": "Sep 2025", "type": "Personal", "format": "Text + Image", "topic": "Morning routine reflection - checking slack immediately", "pillar": "D", "reactions": 59, "comments": 8, "impressions": 5692, "engagement_rate": 1.18, "top_performer": true, "why_it_worked": "Vulnerable and relatable, personal photo, universal experience founders connect with", "url": null},
+    {"id": 10, "date": "Sep 2025", "type": "Webinar", "format": "Text + Image", "topic": "Recipe for High-Impact SKO in 2026", "pillar": "E", "reactions": 15, "comments": 1, "impressions": 760, "engagement_rate": 2.11, "url": null},
+    {"id": 11, "date": "Sep 2025", "type": "Infographic", "format": "Text + Carousel", "topic": "Types of Group Travel", "pillar": "E", "reactions": 15, "comments": 2, "impressions": 1094, "engagement_rate": 1.55, "url": null},
+    {"id": 12, "date": "Sep 2025", "type": "Strategy", "format": "Text Only", "topic": "Partnerships as underrated growth lever", "pillar": "D", "reactions": 7, "comments": 1, "impressions": 682, "engagement_rate": 1.17, "url": null},
+    {"id": 13, "date": "Aug 2025", "type": "Product Launch", "format": "Text + Image", "topic": "Instant Offsites launch - $45,900 saved at Sagamore Resort", "pillar": "C", "reactions": 29, "comments": 4, "impressions": 1161, "engagement_rate": 2.84, "url": null},
+    {"id": 14, "date": "Aug 2025", "type": "Lifestyle", "format": "Text + Link", "topic": "Billy Joel concert at Vanderbilt", "pillar": "Personal", "reactions": 6, "comments": 0, "impressions": 967, "engagement_rate": 0.62, "url": null},
+    {"id": 15, "date": "Aug 2025", "type": "Event", "format": "Text + Image", "topic": "Inductive Fellowship networking reminder", "pillar": "D", "reactions": 13, "comments": 3, "impressions": 1362, "engagement_rate": 1.17, "url": null},
+    {"id": 16, "date": "Aug 2025", "type": "Product", "format": "Text + Image", "topic": "Instant Offsite boxes to customers", "pillar": "C", "reactions": 13, "comments": 2, "impressions": 1424, "engagement_rate": 1.05, "url": null},
+    {"id": 17, "date": "Aug 2025", "type": "Industry", "format": "Text + Image", "topic": "Highlighting Wander in hospitality x tech", "pillar": "E", "reactions": 10, "comments": 2, "impressions": 944, "engagement_rate": 1.27, "url": null},
+    {"id": 18, "date": "Aug 2025", "type": "Tech Commentary", "format": "Text + Link", "topic": "Windsurf AI M&A dealmaking", "pillar": "External", "reactions": 7, "comments": 3, "impressions": 1257, "engagement_rate": 0.80, "url": null},
+    {"id": 19, "date": "Jul 2025", "type": "Product Launch", "format": "Text + Image", "topic": "Instant Offsites welcome boxes", "pillar": "C", "reactions": 49, "comments": 4, "impressions": 1974, "engagement_rate": 2.68, "url": null},
+    {"id": 20, "date": "Jul 2025", "type": "Product Repost", "format": "Repost", "topic": "Instant Offsites announcement (Nick Freeman)", "pillar": "C", "reactions": 42, "comments": 6, "impressions": 1612, "engagement_rate": 2.98, "url": null},
+    {"id": 21, "date": "Jul 2025", "type": "Webinar", "format": "Text + Image", "topic": "Connection Gap webinar with Dropbox and Charlie Health", "pillar": "E", "reactions": 20, "comments": 3, "impressions": 1034, "engagement_rate": 2.22, "url": null},
+    {"id": 22, "date": "Jun 2025", "type": "Thought Leadership", "format": "Text + Image", "topic": "Sahil Bloom's Luck Razor concept", "pillar": "D", "reactions": 28, "comments": 4, "impressions": 2205, "engagement_rate": 1.45, "url": null},
+    {"id": 23, "date": "Jun 2025", "type": "Experience", "format": "Text + Image", "topic": "MUSA MX unreasonable hospitality", "pillar": "D", "reactions": 19, "comments": 1, "impressions": 1502, "engagement_rate": 1.33, "url": null},
+    {"id": 24, "date": "Jun 2025", "type": "Tactical", "format": "Text + Image", "topic": "Wellness activities in team gatherings", "pillar": "E", "reactions": 22, "comments": 1, "impressions": 1160, "engagement_rate": 1.98, "url": null},
+    {"id": 25, "date": "Jun 2025", "type": "Company Story", "format": "Text + Carousel", "topic": "The Marco Evolution - longest professional experience", "pillar": "D", "reactions": 29, "comments": 4, "impressions": 1181, "engagement_rate": 2.79, "url": null},
+    {"id": 26, "date": "Jun 2025", "type": "Video", "format": "Text + Video", "topic": "Online travel built for individuals not teams", "pillar": "A", "reactions": 15, "comments": 3, "impressions": 792, "engagement_rate": 2.27, "url": null},
+    {"id": 27, "date": "May 2025", "type": "Congrats", "format": "Text + Link", "topic": "Owner.com Series C $120M", "pillar": "External", "reactions": 19, "comments": 3, "impressions": 2086, "engagement_rate": 1.05, "url": null},
+    {"id": 28, "date": "May 2025", "type": "Category POV", "format": "Text + Link", "topic": "Offsites boost productivity 20%", "pillar": "A", "reactions": 17, "comments": 2, "impressions": 957, "engagement_rate": 1.99, "url": null},
+    {"id": 29, "date": "May 2025", "type": "Webinar", "format": "Text Only", "topic": "Webinar hosting tips", "pillar": "E", "reactions": 16, "comments": 1, "impressions": 963, "engagement_rate": 1.77, "url": null},
+    {"id": 30, "date": "May 2025", "type": "AI POV", "format": "Text + Image", "topic": "AI will never replace human connection", "pillar": "D", "reactions": 48, "comments": 4, "impressions": 2921, "engagement_rate": 1.78, "url": null},
+    {"id": 31, "date": "May 2025", "type": "Tactical", "format": "Text + Image", "topic": "Best ideas don't come from desk - retreats for brainstorming", "pillar": "E", "reactions": 31, "comments": 3, "impressions": 1556, "engagement_rate": 2.19, "url": null},
+    {"id": 32, "date": "May 2025", "type": "Video", "format": "Text + Video", "topic": "Marco video with auto captions", "pillar": "D", "reactions": 21, "comments": 4, "impressions": 1222, "engagement_rate": 2.05, "url": null},
+    {"id": 33, "date": "Apr 2025", "type": "Happy Friday", "format": "Text + Image", "topic": "Hotel partners appreciation", "pillar": "D", "reactions": 35, "comments": 1, "impressions": 1800, "engagement_rate": 2.00, "url": null}
+  ],
+  "summary_stats": {
+    "total_posts": 33,
+    "total_impressions": 57377,
+    "total_reactions": 760,
+    "total_comments": 89,
+    "avg_impressions": 1739,
+    "avg_reactions": 23,
+    "avg_comments": 2.7,
+    "avg_engagement_rate": 1.72
+  },
+  "performance_by_pillar": {
+    "A": {"posts": 2, "avg_impressions": 875, "avg_reactions": 16},
+    "B": {"posts": 0, "avg_impressions": 0, "avg_reactions": 0},
+    "C": {"posts": 6, "avg_impressions": 1570, "avg_reactions": 31},
+    "D": {"posts": 14, "avg_impressions": 1909, "avg_reactions": 28},
+    "E": {"posts": 7, "avg_impressions": 929, "avg_reactions": 18},
+    "External": {"posts": 6, "avg_impressions": 2482, "avg_reactions": 16}
+  },
+  "performance_by_format": {
+    "Text + Image": {"posts": 20, "avg_impressions": 2092, "avg_reactions": 27},
+    "Repost": {"posts": 4, "avg_impressions": 3290, "avg_reactions": 26},
+    "Text + Link": {"posts": 4, "avg_impressions": 1317, "avg_reactions": 12},
+    "Text + Video": {"posts": 2, "avg_impressions": 1007, "avg_reactions": 18},
+    "Text + Carousel": {"posts": 2, "avg_impressions": 1138, "avg_reactions": 22},
+    "Text Only": {"posts": 2, "avg_impressions": 823, "avg_reactions": 12}
+  }
+}

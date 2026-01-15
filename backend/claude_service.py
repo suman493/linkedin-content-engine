@@ -11,23 +11,24 @@ client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 # Load profile data - try multiple paths to handle different deployment environments
 def get_data_path():
     """Find the data directory, trying multiple possible locations."""
-    # Try relative to this file first (local development)
+    # Try multiple paths to handle local dev vs Railway deployment
     possible_paths = [
-        Path(__file__).parent.parent / "data",  # ../data from backend/
-        Path(__file__).parent / "data",  # ./data from backend/
-        Path("/app/data"),  # Railway root
-        Path("/app/backend/../data"),  # Railway alternative
+        Path(__file__).parent / "data",  # ./data from backend/ (Railway copies files here)
+        Path(__file__).parent.parent / "data",  # ../data from backend/ (local dev)
         Path.cwd() / "data",  # Current working directory
-        Path.cwd().parent / "data",  # Parent of CWD
+        Path("/app/data"),  # Railway root
+        Path.cwd() / "backend" / "data",  # If running from project root
     ]
 
     for path in possible_paths:
-        if path.exists() and (path / "historical_posts.json").exists():
-            print(f"Found data directory at: {path}")
-            return str(path)
+        resolved = path.resolve()
+        print(f"Checking path: {resolved}")
+        if resolved.exists() and (resolved / "historical_posts.json").exists():
+            print(f"Found data directory at: {resolved}")
+            return str(resolved)
 
     # Default fallback - use the first path
-    default_path = str(Path(__file__).parent.parent / "data")
+    default_path = str(Path(__file__).parent / "data")
     print(f"Data directory not found, using default: {default_path}")
     return default_path
 

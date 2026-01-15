@@ -1,0 +1,153 @@
+{
+  "profile": {
+    "name": "Suman Siva",
+    "title": "Co-founder & CEO at Marco Experiences",
+    "linkedin_url": "https://www.linkedin.com/in/suman-siva-64b0712b/",
+    "followers": 8587,
+    "background": {
+      "current": "Co-founder & CEO at Marco Experiences (Oct 2019 - Present)",
+      "previous": [
+        "Investor at SoftBank Vision Fund (Oct 2017 - Oct 2019)",
+        "Associate at Castanea Partners (Aug 2016 - Sep 2017)",
+        "Senior Associate Consultant at Bain & Company (Oct 2013 - Aug 2016)"
+      ],
+      "education": "Vanderbilt University, BA Economics; LSE Study Abroad"
+    },
+    "company": {
+      "name": "Marco Experiences",
+      "description": "Modern group travel platform for company offsites, retreats, and onsites",
+      "metrics": {
+        "companies_helped": "750+",
+        "employees_connected": "75000+",
+        "cost_savings": "20%+",
+        "time_saved": "80+ hours per event"
+      },
+      "notable_clients": ["Facebook", "Netflix", "Slack", "Dropbox", "Figma", "Ramp", "Bain & Company"]
+    }
+  },
+  "content_pillars": {
+    "A": {
+      "name": "Offsites as Infrastructure",
+      "description": "Not vibes. Not swag. Offsites as operating infrastructure.",
+      "themes": ["Operating rhythm", "Capital allocation", "Leadership system", "Trust compounding", "Decision velocity"],
+      "sample_hooks": [
+        "The best offsites aren't retreats. They're operating system updates.",
+        "Your offsite budget is a capital allocation decision.",
+        "Offsites that work have one thing in common: ruthless clarity."
+      ],
+      "2025_posts": 2,
+      "avg_impressions": 875,
+      "status": "UNDERUTILIZED - this is your differentiated lane"
+    },
+    "B": {
+      "name": "What Actually Breaks",
+      "description": "Uncomfortable truths others avoid.",
+      "themes": ["Planning overhead", "Internal politics", "EA/People burnout", "Vendor fragmentation", "Hidden DIY costs"],
+      "sample_hooks": [
+        "The quiet tax nobody talks about: internal planning cost.",
+        "Even when your offsite 'works,' it's expensive in ways that never hit a budget line.",
+        "The question isn't 'can we plan this?' It's 'what is this distracting our best people from?'"
+      ],
+      "2025_posts": 0,
+      "status": "NOT YET USED - opportunity for 2026"
+    },
+    "C": {
+      "name": "Proof > Promises",
+      "description": "Show receipts. Let results speak.",
+      "themes": ["Before/after metrics", "Time saved", "Decisions unblocked", "Momentum created", "Client case studies"],
+      "sample_hooks": [
+        "K18 saved 100+ hours. Here's exactly how.",
+        "21% cost savings isn't marketing—it's math.",
+        "750+ companies. 75,000+ employees connected. Here's what we've learned."
+      ],
+      "2025_posts": 6,
+      "avg_impressions": 1570,
+      "avg_reactions": 31,
+      "status": "HIGH reactions - lead with specific numbers"
+    },
+    "D": {
+      "name": "Founder POV",
+      "description": "Building in public. Lessons from the arena.",
+      "themes": ["Multi-product expansion", "Leadership evolution", "Remote building", "Leverage and energy", "Personal stories"],
+      "sample_hooks": [
+        "We went from one product to three in 2025. Here's what almost broke us.",
+        "One thing I'm re-learning: momentum comes from making progress visible.",
+        "Building Marco while traveling. What I've figured out about presence."
+      ],
+      "2025_posts": 14,
+      "avg_impressions": 1909,
+      "avg_reactions": 28,
+      "status": "STRENGTH - personal stories resonate most"
+    },
+    "E": {
+      "name": "Category Education",
+      "description": "Explain what others assume. Teach the industry.",
+      "themes": ["Why hotels price groups weirdly", "Why RFPs are broken", "Why culture tools fail", "Why retreats don't change behavior"],
+      "sample_hooks": [
+        "Why your hotel quote is 40% higher than it should be.",
+        "The RFP process is designed for hotels, not you.",
+        "Most 'culture' tools fail because they optimize for vibes, not decisions."
+      ],
+      "2025_posts": 7,
+      "avg_impressions": 929,
+      "status": "Lower reach - lead with insight not information"
+    }
+  },
+  "writing_style": {
+    "tone": "Direct, personal, conversational",
+    "formatting": {
+      "bullet_style": "→ (arrow, not dash)",
+      "paragraph_length": "Short, 1-2 sentences",
+      "white_space": "Lots of line breaks between ideas",
+      "ending": "Punchy insight or reflection"
+    },
+    "patterns": [
+      "Open with personal hook or observation",
+      "Use '→' for bullet lists",
+      "Reference Bain/SoftBank/Marco background when relevant",
+      "End with insight, not call-to-action",
+      "Avoid corporate speak and buzzwords"
+    ],
+    "avoid": [
+      "Webinar promos without insight",
+      "Generic thought leadership",
+      "Overuse of emojis",
+      "Long paragraphs",
+      "Passive voice"
+    ]
+  },
+  "top_performing_formula": {
+    "description": "Personal story + Strong POV + Your photo",
+    "evidence": [
+      {
+        "post": "Bubble Bois AI discussion",
+        "impressions": 6342,
+        "reactions": 40,
+        "format": "Text + Image (SoftBank team photo)",
+        "why_it_worked": "Personal connection, hot take, credibility photo"
+      },
+      {
+        "post": "Morning routine reflection",
+        "impressions": 5692,
+        "reactions": 59,
+        "format": "Text + Image (nature selfie)",
+        "why_it_worked": "Vulnerable, relatable, personal photo"
+      }
+    ]
+  },
+  "posting_rhythm": {
+    "recommended_frequency": "3-4 posts per week",
+    "best_days": {
+      "Monday": "Re-entry / Big picture (Pillar D or A)",
+      "Wednesday": "Category POV / Insight (Pillar A or E)",
+      "Thursday": "Tactical / Operator truth (Pillar B or C)",
+      "Friday": "Founder reflection (Pillar D)"
+    }
+  },
+  "competitive_positioning": {
+    "vs_boompop": "They do templates + checklists. You do strategy + outcomes.",
+    "vs_teamout": "They do remote-first belonging. You do all teams + hard metrics.",
+    "vs_offsite": "They do leadership retreats. You do full-stack proof + founder credibility.",
+    "your_edge": "Nobody else has Bain + SoftBank + Founder-operator credibility. Use it."
+  }
+}

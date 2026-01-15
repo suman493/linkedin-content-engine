@@ -30,6 +30,7 @@ Thumbs.db
 *.log
 npm-debug.log*
 
-# Data files (user-specific)
+# Data files (user-specific) - but keep data folder
 backend/*.json
 !backend/package.json
+!backend/data/
