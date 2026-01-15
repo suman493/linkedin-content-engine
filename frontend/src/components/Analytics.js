@@ -169,15 +169,15 @@ function Analytics({ stats }) {
     );
   }
 
-  const { posts, summary_stats, performance_by_pillar, performance_by_format } = historicalData;
+  const { posts = [], summary_stats = {}, performance_by_pillar = {}, performance_by_format = {} } = historicalData || {};
 
-  // Calculate metrics from real data
+  // Calculate metrics from real data with defaults
   const filteredPosts = posts;
-  const totalImpressions = summary_stats.total_impressions;
-  const totalReactions = summary_stats.total_reactions;
-  const totalComments = summary_stats.total_comments;
-  const avgEngagementRate = summary_stats.avg_engagement_rate;
-  const avgImpressionsPerPost = summary_stats.avg_impressions;
+  const totalImpressions = summary_stats.total_impressions || 0;
+  const totalReactions = summary_stats.total_reactions || 0;
+  const totalComments = summary_stats.total_comments || 0;
+  const avgEngagementRate = summary_stats.avg_engagement_rate || 0;
+  const avgImpressionsPerPost = summary_stats.avg_impressions || 0;
 
   // Top performers
   const topPerformers = [...posts].sort((a, b) => b.impressions - a.impressions).slice(0, 5);
