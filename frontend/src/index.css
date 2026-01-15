@@ -17,3 +17,180 @@ body {
 .pillar-C { @apply bg-green-100 text-green-800 border-green-300; }
 .pillar-D { @apply bg-purple-100 text-purple-800 border-purple-300; }
 .pillar-E { @apply bg-yellow-100 text-yellow-800 border-yellow-300; }
+
+/* Mobile-first responsive utilities */
+@layer utilities {
+  /* Hide scrollbar but allow scrolling */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Touch-friendly tap targets */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Mobile Navigation - horizontal scroll */
+@media (max-width: 768px) {
+  /* Make navigation tabs horizontally scrollable on mobile */
+  nav .flex.space-x-1 {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 2px;
+  }
+  nav .flex.space-x-1::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Ensure nav buttons don't shrink */
+  nav button {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  /* Stack header elements vertically on mobile */
+  header .flex.items-center.justify-between {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Hide header stats on very small screens */
+  header .flex.space-x-6.text-sm {
+    display: none;
+  }
+
+  /* Responsive tables - allow horizontal scroll */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Make cards stack properly */
+  .grid.grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Smaller padding on mobile */
+  .p-6 {
+    padding: 1rem;
+  }
+
+  .p-5 {
+    padding: 0.875rem;
+  }
+
+  /* Smaller text sizes on mobile */
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+
+  /* Analytics header - stack buttons */
+  .bg-gradient-to-r .flex.items-center.space-x-3 {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* View toggle and action buttons - make full width on mobile */
+  .bg-gradient-to-r button {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Bar chart labels - truncate more aggressively */
+  .w-32.text-xs {
+    width: 80px;
+    font-size: 0.65rem;
+  }
+
+  /* Fix modal widths on mobile */
+  .fixed.inset-0 > div {
+    margin: 0.5rem;
+    max-height: calc(100vh - 1rem);
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Show stats but in compact form */
+  header .flex.space-x-6.text-sm {
+    gap: 1rem;
+  }
+
+  header .flex.space-x-6.text-sm > div {
+    text-align: center;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  /* Extra small screen adjustments */
+  .max-w-7xl {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* Stack analytics header completely */
+  .bg-gradient-to-r .flex.items-center.justify-between {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .bg-gradient-to-r .flex.items-center.space-x-3 {
+    justify-content: center;
+    margin-top: 0.75rem;
+  }
+
+  /* Make view toggle buttons equal width */
+  .bg-white\/20 {
+    width: 100%;
+    display: flex;
+  }
+
+  .bg-white\/20 button {
+    flex: 1;
+  }
+
+  /* Goal planner inputs stack */
+  .grid.grid-cols-1.md\:grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Post list items - stack content */
+  .flex.items-center.space-x-3.p-2 {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  /* Top performers card - smaller text */
+  .space-y-3 > div .text-sm {
+    font-size: 0.75rem;
+  }
+
+  /* Monthly chart - fewer bars visible */
+  .flex.items-end.justify-between.space-x-2 {
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  /* Table headers - hide some columns */
+  table th:nth-child(4),
+  table th:nth-child(5),
+  table th:nth-child(6),
+  table td:nth-child(4),
+  table td:nth-child(5),
+  table td:nth-child(6) {
+    display: none;
+  }
+}

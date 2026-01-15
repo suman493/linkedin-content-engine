@@ -100,33 +100,33 @@ function App() {
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-linkedin-blue rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">L</span>
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
+          <div className="flex items-center justify-between flex-wrap gap-2">
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-linkedin-blue rounded-lg flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold text-lg sm:text-xl">L</span>
               </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">LinkedIn Content Engine</h1>
-                <p className="text-sm text-gray-500">
+              <div className="min-w-0">
+                <h1 className="text-base sm:text-xl font-bold text-gray-900 truncate">LinkedIn Content Engine</h1>
+                <p className="text-xs sm:text-sm text-gray-500 truncate">
                   {clerkEnabled ? <UserInfoWithClerk /> : 'Suman Siva | Marco Experiences'}
                 </p>
               </div>
             </div>
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-3 sm:space-x-6">
               {stats && (
-                <div className="flex space-x-6 text-sm">
+                <div className="hidden md:flex space-x-4 lg:space-x-6 text-sm">
                   <div className="text-center">
                     <div className="font-semibold text-gray-900">{stats.ideas_count}</div>
-                    <div className="text-gray-500">Ideas</div>
+                    <div className="text-gray-500 text-xs">Ideas</div>
                   </div>
                   <div className="text-center">
                     <div className="font-semibold text-gray-900">{stats.drafts_count}</div>
-                    <div className="text-gray-500">Drafts</div>
+                    <div className="text-gray-500 text-xs">Drafts</div>
                   </div>
                   <div className="text-center">
                     <div className="font-semibold text-gray-900">{stats.scheduled_count}</div>
-                    <div className="text-gray-500">Scheduled</div>
+                    <div className="text-gray-500 text-xs">Scheduled</div>
                   </div>
                 </div>
               )}
@@ -136,15 +136,15 @@ function App() {
         </div>
       </header>
 
-      {/* Navigation */}
-      <nav className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex space-x-1">
+      {/* Navigation - horizontally scrollable on mobile */}
+      <nav className="bg-white border-b border-gray-200 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4">
+          <div className="flex space-x-1 overflow-x-auto scrollbar-hide -mb-px">
             {TABS.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
+                className={`px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 transition-colors whitespace-nowrap flex-shrink-0 ${
                   activeTab === tab.id
                     ? 'border-linkedin-blue text-linkedin-blue'
                     : 'border-transparent text-gray-500 hover:text-gray-700'
@@ -152,7 +152,7 @@ function App() {
               >
                 {tab.label}
                 {tab.id === 'ideas' && selectedIdeas.length > 0 && (
-                  <span className="ml-2 bg-linkedin-blue text-white text-xs px-2 py-0.5 rounded-full">
+                  <span className="ml-1 sm:ml-2 bg-linkedin-blue text-white text-xs px-1.5 sm:px-2 py-0.5 rounded-full">
                     {selectedIdeas.length}
                   </span>
                 )}
@@ -163,7 +163,7 @@ function App() {
       </nav>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 py-6">
+      <main className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
         {activeTab === 'analytics' && (
           <Analytics stats={stats} pillars={pillars} />
         )}

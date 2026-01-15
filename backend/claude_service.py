@@ -1,5 +1,6 @@
 import os
 import json
+from pathlib import Path
 from anthropic import Anthropic
 from dotenv import load_dotenv
 
@@ -7,8 +8,30 @@ load_dotenv()
 
 client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
-# Load profile data
-DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data")
+# Load profile data - try multiple paths to handle different deployment environments
+def get_data_path():
+    """Find the data directory, trying multiple possible locations."""
+    # Try relative to this file first (local development)
+    possible_paths = [
+        Path(__file__).parent.parent / "data",  # ../data from backend/
+        Path(__file__).parent / "data",  # ./data from backend/
+        Path("/app/data"),  # Railway root
+        Path("/app/backend/../data"),  # Railway alternative
+        Path.cwd() / "data",  # Current working directory
+        Path.cwd().parent / "data",  # Parent of CWD
+    ]
+
+    for path in possible_paths:
+        if path.exists() and (path / "historical_posts.json").exists():
+            print(f"Found data directory at: {path}")
+            return str(path)
+
+    # Default fallback - use the first path
+    default_path = str(Path(__file__).parent.parent / "data")
+    print(f"Data directory not found, using default: {default_path}")
+    return default_path
+
+DATA_PATH = get_data_path()
 
 def load_profile_data():
     try:

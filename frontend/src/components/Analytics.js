@@ -339,20 +339,20 @@ function Analytics({ stats }) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       {/* Header with LinkedIn Link */}
-      <div className="bg-gradient-to-r from-linkedin-blue to-blue-700 rounded-lg shadow p-6 text-white">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-2xl font-bold">LinkedIn Analytics</h2>
-            <p className="text-blue-100 mt-1">Performance data from {posts.length} posts (Apr 2025 - Nov 2025)</p>
+      <div className="bg-gradient-to-r from-linkedin-blue to-blue-700 rounded-lg shadow p-4 sm:p-6 text-white">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div className="text-center sm:text-left">
+            <h2 className="text-xl sm:text-2xl font-bold">LinkedIn Analytics</h2>
+            <p className="text-blue-100 mt-1 text-sm sm:text-base">{posts.length} posts tracked</p>
           </div>
-          <div className="flex items-center space-x-3">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
             {/* View Toggle */}
             <div className="flex bg-white/20 rounded-lg p-1">
               <button
                 onClick={() => setCurrentView(VIEWS.OVERVIEW)}
-                className={`px-3 py-1 rounded text-sm transition-colors ${
+                className={`flex-1 px-3 py-1.5 sm:py-1 rounded text-xs sm:text-sm transition-colors ${
                   currentView === VIEWS.OVERVIEW
                     ? 'bg-white text-linkedin-blue'
                     : 'text-white hover:bg-white/10'
@@ -362,7 +362,7 @@ function Analytics({ stats }) {
               </button>
               <button
                 onClick={() => setCurrentView(VIEWS.ALL_POSTS)}
-                className={`px-3 py-1 rounded text-sm transition-colors ${
+                className={`flex-1 px-3 py-1.5 sm:py-1 rounded text-xs sm:text-sm transition-colors ${
                   currentView === VIEWS.ALL_POSTS
                     ? 'bg-white text-linkedin-blue'
                     : 'text-white hover:bg-white/10'
@@ -371,27 +371,31 @@ function Analytics({ stats }) {
                 All Posts
               </button>
             </div>
-            <button
-              onClick={() => {
-                setShowImportModal(true);
-                loadCsvTemplate();
-              }}
-              className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 flex items-center space-x-2"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
-              </svg>
-              <span>Import CSV</span>
-            </button>
-            <button
-              onClick={() => openLinkedInPosts()}
-              className="px-4 py-2 bg-white text-linkedin-blue rounded-lg hover:bg-blue-50 flex items-center space-x-2"
-            >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-              <span>View on LinkedIn</span>
-            </button>
+            <div className="flex gap-2">
+              <button
+                onClick={() => {
+                  setShowImportModal(true);
+                  loadCsvTemplate();
+                }}
+                className="flex-1 sm:flex-none px-3 sm:px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 flex items-center justify-center space-x-1 sm:space-x-2 text-xs sm:text-sm"
+              >
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                </svg>
+                <span className="hidden sm:inline">Import CSV</span>
+                <span className="sm:hidden">Import</span>
+              </button>
+              <button
+                onClick={() => openLinkedInPosts()}
+                className="flex-1 sm:flex-none px-3 sm:px-4 py-2 bg-white text-linkedin-blue rounded-lg hover:bg-blue-50 flex items-center justify-center space-x-1 sm:space-x-2 text-xs sm:text-sm"
+              >
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                <span className="hidden sm:inline">View on LinkedIn</span>
+                <span className="sm:hidden">LinkedIn</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -752,31 +756,31 @@ function Analytics({ stats }) {
       </div>
 
       {/* Header Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <div className="bg-white rounded-lg shadow p-5">
-          <div className="text-3xl font-bold text-gray-900">{posts.length}</div>
-          <div className="text-sm text-gray-500">Total Posts</div>
-          <div className="mt-2 text-xs text-green-600">Apr - Nov 2025</div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+        <div className="bg-white rounded-lg shadow p-3 sm:p-5">
+          <div className="text-2xl sm:text-3xl font-bold text-gray-900">{posts.length}</div>
+          <div className="text-xs sm:text-sm text-gray-500">Total Posts</div>
+          <div className="mt-1 sm:mt-2 text-xs text-green-600 hidden sm:block">Apr - Nov 2025</div>
         </div>
-        <div className="bg-white rounded-lg shadow p-5">
-          <div className="text-3xl font-bold text-gray-900">{totalImpressions.toLocaleString()}</div>
-          <div className="text-sm text-gray-500">Total Impressions</div>
-          <div className="mt-2 text-xs text-gray-500">{avgImpressionsPerPost.toLocaleString()} avg/post</div>
+        <div className="bg-white rounded-lg shadow p-3 sm:p-5">
+          <div className="text-2xl sm:text-3xl font-bold text-gray-900">{totalImpressions.toLocaleString()}</div>
+          <div className="text-xs sm:text-sm text-gray-500">Total Impressions</div>
+          <div className="mt-1 sm:mt-2 text-xs text-gray-500 hidden sm:block">{avgImpressionsPerPost.toLocaleString()} avg/post</div>
         </div>
-        <div className="bg-white rounded-lg shadow p-5">
-          <div className="text-3xl font-bold text-gray-900">{totalReactions.toLocaleString()}</div>
-          <div className="text-sm text-gray-500">Total Reactions</div>
-          <div className="mt-2 text-xs text-gray-500">{summary_stats.avg_reactions} avg/post</div>
+        <div className="bg-white rounded-lg shadow p-3 sm:p-5">
+          <div className="text-2xl sm:text-3xl font-bold text-gray-900">{totalReactions.toLocaleString()}</div>
+          <div className="text-xs sm:text-sm text-gray-500">Total Reactions</div>
+          <div className="mt-1 sm:mt-2 text-xs text-gray-500 hidden sm:block">{summary_stats.avg_reactions} avg/post</div>
         </div>
-        <div className="bg-white rounded-lg shadow p-5">
-          <div className="text-3xl font-bold text-gray-900">{totalComments}</div>
-          <div className="text-sm text-gray-500">Total Comments</div>
-          <div className="mt-2 text-xs text-gray-500">{summary_stats.avg_comments} avg/post</div>
+        <div className="bg-white rounded-lg shadow p-3 sm:p-5">
+          <div className="text-2xl sm:text-3xl font-bold text-gray-900">{totalComments}</div>
+          <div className="text-xs sm:text-sm text-gray-500">Total Comments</div>
+          <div className="mt-1 sm:mt-2 text-xs text-gray-500 hidden sm:block">{summary_stats.avg_comments} avg/post</div>
         </div>
-        <div className="bg-white rounded-lg shadow p-5">
-          <div className="text-3xl font-bold text-linkedin-blue">{avgEngagementRate}%</div>
-          <div className="text-sm text-gray-500">Avg Engagement Rate</div>
-          <div className="mt-2 text-xs text-green-600">Above industry avg (2%)</div>
+        <div className="bg-white rounded-lg shadow p-3 sm:p-5 col-span-2 sm:col-span-1">
+          <div className="text-2xl sm:text-3xl font-bold text-linkedin-blue">{avgEngagementRate}%</div>
+          <div className="text-xs sm:text-sm text-gray-500">Avg Engagement</div>
+          <div className="mt-1 sm:mt-2 text-xs text-green-600 hidden sm:block">Above industry avg</div>
         </div>
       </div>
 

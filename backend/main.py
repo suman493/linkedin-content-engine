@@ -922,6 +922,45 @@ async def sms_webhook(data: dict, db: Session = Depends(get_db)):
 </Response>"""
 
 
+@app.get("/api/debug/paths")
+async def debug_paths():
+    """Debug endpoint to check file paths and data loading."""
+    from claude_service import DATA_PATH, HISTORICAL_POSTS, PROFILE_DATA
+    from pathlib import Path
+
+    result = {
+        "data_path": DATA_PATH,
+        "data_path_exists": Path(DATA_PATH).exists() if DATA_PATH else False,
+        "cwd": str(Path.cwd()),
+        "file_dir": str(Path(__file__).parent),
+        "historical_posts_count": len(HISTORICAL_POSTS.get("posts", [])),
+        "summary_stats": HISTORICAL_POSTS.get("summary_stats", {}),
+        "profile_loaded": bool(PROFILE_DATA.get("content_pillars")),
+    }
+
+    # Check what files exist in data directory
+    if DATA_PATH and Path(DATA_PATH).exists():
+        result["files_in_data_dir"] = [f.name for f in Path(DATA_PATH).iterdir()]
+    else:
+        result["files_in_data_dir"] = []
+
+    # Check potential paths
+    potential_paths = [
+        Path(__file__).parent.parent / "data",
+        Path(__file__).parent / "data",
+        Path("/app/data"),
+        Path.cwd() / "data",
+    ]
+    result["path_checks"] = {}
+    for p in potential_paths:
+        result["path_checks"][str(p)] = {
+            "exists": p.exists(),
+            "has_historical": (p / "historical_posts.json").exists() if p.exists() else False
+        }
+
+    return result
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
