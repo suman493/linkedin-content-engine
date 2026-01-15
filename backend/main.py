@@ -19,10 +19,17 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="LinkedIn Content Engine", version="1.0.0")
 
-# CORS middleware
+# CORS middleware - allow Vercel frontend and localhost for development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "https://linkedin-content-engine-gamma.vercel.app",
+        "https://linkedin-content-engine.vercel.app",
+        # Allow all Vercel preview deployments
+        "https://*.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
