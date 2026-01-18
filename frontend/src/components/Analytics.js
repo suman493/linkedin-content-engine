@@ -169,10 +169,13 @@ function Analytics({ stats }) {
   const loadHistoricalData = async () => {
     setLoading(true);
     try {
+      console.log('Loading historical data...');
       const response = await getHistoricalData();
+      console.log('Historical data loaded:', response.data?.posts?.length, 'posts');
       setHistoricalData(response.data);
     } catch (error) {
       console.error('Error loading historical data:', error);
+      console.error('Error details:', error.message, error.response?.status, error.response?.data);
       setHistoricalData(null);
     }
     setLoading(false);
@@ -189,7 +192,14 @@ function Analytics({ stats }) {
   if (!historicalData) {
     return (
       <div className="bg-red-50 p-4 rounded-lg text-red-700">
-        Failed to load historical data. Make sure the backend is running.
+        <p className="font-medium">Failed to load historical data.</p>
+        <p className="text-sm mt-2">Please check the browser console for details. The backend API should be at: {process.env.REACT_APP_API_URL || 'http://localhost:8000/api'}</p>
+        <button
+          onClick={loadHistoricalData}
+          className="mt-3 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+        >
+          Retry
+        </button>
       </div>
     );
   }
